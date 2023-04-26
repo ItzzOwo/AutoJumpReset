@@ -1,0 +1,16 @@
+[
+{
+  "modid": "AJR",
+  "name": "AutoJumpReset",
+  "description": "A Mod that Jump Resets.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ItzOwo"],
+  "credits": "ItzOwo",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

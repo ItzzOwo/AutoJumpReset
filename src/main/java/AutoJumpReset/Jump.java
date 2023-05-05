@@ -1,9 +1,7 @@
 package AutoJumpReset;
 
 import com.google.common.eventbus.Subscribe;
-import keystrokesmod.client.event.impl.PacketEvent;
-import keystrokesmod.client.module.Module;
-import keystrokesmod.client.module.setting.impl.DescriptionSetting;
+import AutoJumpReset.PacketEvent;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.network.play.server.S12PacketEntityVelocity;
 import org.lwjgl.input.Keyboard;

@@ -2,20 +2,19 @@ package AutoJumpReset;
 
 import com.google.common.eventbus.Subscribe;
 import net.minecraft.client.Minecraft;
-import AutoJumpReset.PacketEvent;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.network.play.server.S12PacketEntityVelocity;
 import org.lwjgl.input.Keyboard;
+
 import java.util.Random;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-
 public class Jump {
-   public static final Minecraft mc = Minecraft.getMinecraft();
-   private KeyBinding JumpKey = new KeyBinding("Jump", Keyboard.KEY_SPACE, "Keystrokes");
-   private final ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
+    private static final Minecraft mc = Minecraft.getMinecraft();
+    private final KeyBinding JumpKey = new KeyBinding("Jump", Keyboard.KEY_SPACE, "Keystrokes");
+    private final ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
     @Subscribe
     public void onPacket(PacketEvent e) {
@@ -32,9 +31,7 @@ public class Jump {
         }
     }
 
-    @Override
     public void onDisable() {
-        super.onDisable();
         executor.shutdownNow();
     }
 }

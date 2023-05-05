@@ -1,6 +1,7 @@
 package AutoJumpReset;
 
 import com.google.common.eventbus.Subscribe;
+import net.minecraft.client.Minecraft;
 import AutoJumpReset.PacketEvent;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.network.play.server.S12PacketEntityVelocity;
